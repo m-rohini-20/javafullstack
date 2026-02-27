@@ -1,0 +1,405 @@
+package javafullstack;
+
+import java.util.Scanner;
+
+public class coditionalstatement {
+
+	public static void main(String[] args) {
+		Scanner ob=new Scanner(System.in);
+		
+//		if-task
+//		number greater than 100
+		System.out.print("Enter a number:");
+		int a=ob.nextInt();
+		if(a>100) {
+			System.out.println("Given number is greater than 100");
+		}
+		
+		
+//		number less than 0
+		System.out.print("Enter a number:");
+		int b=ob.nextInt();
+		if(b<0) {
+			System.out.println("given number is less than 0");
+		}
+		
+//		check character is 'A'
+		System.out.print("Enter a character:");
+		char c=ob.next().charAt(0);
+		if(c=='A') {
+			System.out.println("Given character is A");
+		}
+		
+//		number divisible by 7
+		System.out.print("Enter a number:");
+		int d=ob.nextInt();
+		if(d%7==0) {
+			System.out.println("given nmber is divisible by 7");
+		}
+		
+//		mark=100
+		System.out.print("Enter a mark:");
+		int mark=ob.nextInt();
+		if(mark==100) {
+			System.out.println("Mark is equals to 100");
+		}
+		
+		
+//		string length
+		System.out.print("Enter a Word:");
+		String word=ob.nextLine();
+		if(word.length()>5) {
+			System.out.println("The given word has more than 5 letters"); 
+		}
+		
+		ob.nextLine();
+//		number ends with 5
+		System.out.print("Enter a number:");
+		int num=ob.nextInt();
+		if(num%10==5) {
+			System.out.println("The number ends with 5");
+		}
+		
+		
+//		salary equals 25k
+		System.out.print("Enter salary:");
+		int sal=ob.nextInt();
+		if(sal==25000) {
+			System.out.println("Salary equals to 25000");
+		}
+		
+		
+//		correct password
+		System.out.print("Enter the password:");
+		String pw=ob.nextLine();
+		if(pw.equals("abc123")) {
+			System.out.println("correct password");
+		}
+		ob.nextLine();
+		
+		
+//		3 digit number
+		System.out.print("Enter a number:");
+		int num1=ob.nextInt();
+		if(num1>=100  && num1<=999) {
+			System.out.println("given nnumber is a three digit number");
+		}
+		
+		
+//		divisible by 2 & 3
+		System.out.print("Enter a number:");
+		int z=ob.nextInt();
+		if(z%2==0  && z%3==0) {
+			System.out.println("given number is divisible  by both 2 and 3");
+		}
+		
+		
+//		character is @
+		System.out.print("Enter a character:");
+		char one=ob.next().charAt(0);
+		if(one=='@') {
+			System.out.println("The given character is @");
+		}
+		
+		
+//		temperature
+		System.out.print("Enter a value:");
+		int Cel=ob.nextInt();
+		System.out.print("Enter a unit(C,F,K):");
+		String unit=ob.next();
+		if(Cel==0 && unit.equalsIgnoreCase("c") ) {
+			System.out.println("Given value is equals to 0C");
+		}
+		
+		
+//		year equals 2024
+		System.out.print("Enter a year:");
+		int year=ob.nextInt();
+		if(year==2024) {
+			System.out.println("The given year is 2024");
+		}
+
+		
+//		bank balance
+		System.out.print("Enter the balance:");
+		int amt=ob.nextInt();
+		if(amt==0) {
+			System.out.println("Bank balance is 0");
+		}
+		
+		
+	}
+
+}
+
+
+
+
+//ifelse
+package javafullstack;
+
+import java.util.Scanner;
+
+public class ifelse {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		
+//		ifelse
+//		greater than 50 or not
+		System.out.println("Enter a number:");
+		int a=obj.nextInt();
+		if(a>50) {
+			System.out.println("The given number is greater than 50");
+		}
+		else {
+			System.out.println("not greater than 50");
+		}
+		
+		
+//		divisible by 9 or not
+		System.out.print("Enter a number:");
+		int num=obj.nextInt();
+		if(num%9==0) {
+			System.out.println("The given number is divisible by 9");
+		}
+		else {
+			System.out.println("not divisible by 9");
+		}
+		
+		
+		
+//		compare two strings
+		System.out.println("Enter a word1:");
+		String word1=obj.nextLine();
+		System.out.println("Enter a word2:");
+		String word2=obj.nextLine();
+		if(word1.equalsIgnoreCase(word2)) {
+			System.out.println("same word");
+		}
+		else {
+			System.out.println("different word");
+		}
+		
+
+		
+//		age>60
+		System.out.print("Enter a age:");
+		int age=obj.nextInt();
+		if(age>60) {
+			System.out.println("person is senior");
+		}
+		else {
+			System.out.println("not a senior");
+		}
+	
+
+		
+//		2digit no
+		System.out.print("Enter a number:");
+		int num2=obj.nextInt();
+		if(num2>=10 && num2<=99) {
+			System.out.println("The given number is two digit number");
+		}
+		else {
+			System.out.println("not a two digit number");
+		}
+		
+		
+		
+//		alphabet or not
+		System.out.print("Enter a character:");
+		char char1=obj.next().charAt(0);
+		if((char1>='a' &&  char1<='z')||(char1>='A' &&  char1<='Z'))
+		{
+			System.out.println("The given character is alphabet");
+		}
+		else {
+			System.out.println("not a alphabet");
+		}
+		
+		
+//		perfect square
+		System.out.print("Enter a number:");
+		int z=obj.nextInt();
+		int no=(int)Math.sqrt(z);
+		if(z==(no*no))
+		{
+			System.out.println("The given number is perfect square");
+		}
+		else {
+			System.out.println("not a perfect square");
+		}
+		
+		
+		
+//		total purchase
+		System.out.print("Enter the amount:");
+		int amt=obj.nextInt();
+		if(amt>1000)
+		{
+			System.out.println("Free delivery");
+		}
+		else {
+			System.out.println("no free delivery");
+		}
+		
+//		total attendance
+		System.out.print("Enter the attendance percent:");
+		int per=obj.nextInt();
+		if(per>=75)
+		{
+			System.out.println("greater than or equal to 75%");
+		}
+		else {
+			System.out.println(" less than 75%");
+		}
+		
+		
+		
+//		username
+		System.out.print("Enter the name:");
+		String user=obj.nextLine();
+		if(user.equals("abc@2024"))
+		{
+			System.out.println("username matched");
+		}
+		else {
+			System.out.println("invalid username");
+		}
+		
+		
+		
+//		multiple of 4
+		System.out.print("Enter the number:");
+		int no1=obj.nextInt();
+		if(no1%4==0)
+		{
+			System.out.println("given number is multiple of 4");
+		}
+		else {
+			System.out.println("not multiple of 4");
+		}
+		
+		
+		
+//		pow of 2
+		System.out.print("Enter the number:");
+		int no2=obj.nextInt();
+		if(no2%2==0)
+		{
+			System.out.println("given number is power of 2");
+		}
+		else {
+			System.out.println("not power of 2");
+		}
+		
+		
+		
+//		space or not
+		String char2=" ";
+		if(char2.equals(" "))
+		{
+			System.out.println("given character is space");
+		}
+		else {
+			System.out.println("not a space");
+		}
+		
+		
+//		number less than 10
+		System.out.print("Enter the number:");
+		int no3=obj.nextInt();
+		if(no3<10)
+		{
+			System.out.println("given number is less than 10");
+		}
+		else {
+			System.out.println("not less than 10");
+		}
+		
+		
+		
+//		divisible by 11
+		System.out.print("Enter the number:");
+		int no4=obj.nextInt();
+		if(no4%11==0)
+		{
+			System.out.println("given number is divisible by 11");
+		}
+		else {
+			System.out.println("not divisible by 11");
+		}
+		
+		
+//		loan approval
+		System.out.print("Enter the credit score:");
+		int score=obj.nextInt();
+		if(score>=700)
+		{
+			System.out.println("Loan is approved");
+		}
+		else {
+			System.out.println("not approved");
+		}
+		
+		
+		
+		
+//		electricity unit
+		System.out.print("Enter the unit value:");
+		int uv=obj.nextInt();
+		if(uv>500)
+		{
+			System.out.println("greater than 500");
+		}
+		else {
+			System.out.println("lesser than 500");
+		}
+		
+		
+		
+//		mark is bt 40 and 60
+		System.out.print("Enter the mark:");
+		int mark=obj.nextInt();
+		if(mark>40 && mark<60)
+		{
+			System.out.println("Mark is between 40 and 60");
+		}
+		else {
+			System.out.println("not  in the range");
+		}
+		
+		
+		
+//		password
+		System.out.print("Enter the password:");
+		String pass=obj.next();
+		if(pass.equals("admin123"))
+		{
+			System.out.println("correct password");
+		}
+		else {
+			System.out.println("invalid password");
+		}
+		
+		
+		
+//		cube
+		System.out.print("Enter the number:");
+		int no0=obj.nextInt();
+		int cube=(int)Math.cbrt(no0);
+		if(no0==(Math.pow(cube, 3)))
+		{
+			System.out.println("given number is cube number");
+		}
+		else {
+			System.out.println("not a cube number");
+		}
+		
+		
+		
+	}
+
+}
+
