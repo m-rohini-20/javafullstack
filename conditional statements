@@ -403,3 +403,449 @@ public class ifelse {
 
 }
 
+
+
+
+
+package javafullstack;
+
+import java.util.Scanner;
+
+public class elseif {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		
+		//season based on number
+		System.out.print("Enter the number of the month:");
+		int num=obj.nextInt();
+		if(num==12 || num==1 || num==2) {
+			System.out.println("Winter season");
+		}
+		else if(num==3 || num==4 || num==5) {
+			System.out.println("Summer season");
+		}
+		else if(num== 6|| num==7 ) {
+			System.out.println("Spring season");
+		}
+		else if(num==8 || num==9 ) {
+			System.out.println("Autumn season");
+		}
+		else {
+			System.out.println("Rainy season");
+		}
+		
+		
+		
+		//types of quadrilateral
+		System.out.println("Enter the four sides:");
+		System.out.print("a: ");
+		int a=obj.nextInt();
+		System.out.print("b: ");
+		int b=obj.nextInt();
+		System.out.print("c: ");
+		int c=obj.nextInt();
+		System.out.print("d: ");
+		int d=obj.nextInt();
+		System.out.println("Enter all the for angle:");
+		System.out.print("angle1: ");
+		int A=obj.nextInt();
+		System.out.print("angle2: ");
+		int B=obj.nextInt();
+		System.out.print("angle3: ");
+		int C=obj.nextInt();
+		System.out.print("angle4: ");
+		int D=obj.nextInt();
+		
+		if(a==b && b==c && c==d && d==a && A==90 && B==90 && C==90 && D==90 ) {
+			System.out.println("It is a square");
+		}
+		else if(a==c && b==d && A==90 && B==90 && C==90 && D==90) {
+			System.out.println("It is Rectangle");
+		}
+		else if(a==b && b==c && c==d && d==a && A!=90 && B!=90 && C!=90 && D!=90) {
+			System.out.println("It is Rhombus");
+		}
+		else if(a==c && b==d && A==C && B==D) {
+			System.out.println("It is Parallelogram");
+			
+		}
+		else if(((a==b && c==d)||(a==d && c==b)) && (A==C || B==D))
+		{
+			System.out.println("It is kite");
+		}
+		else {
+			System.out.println("types of quadrilateral");
+		}
+		
+		
+		
+		//smallest of three number
+		System.out.print("Enter the first number :");
+		int num1=obj.nextInt();
+		System.out.print("Enter the second number :");
+		int num2=obj.nextInt();
+		System.out.print("Enter the third number :");
+		int num3=obj.nextInt();
+		if(num1<num2 && num1<num3) {
+			System.out.println(num1+" is the smallest");
+		}
+		else if(num2<num1 && num2<num3) {
+			System.out.println(num2+" is the smallest");
+		}
+		else {
+			System.out.println(num3+" is the smallest");
+		}
+		
+		
+		
+		
+		//performance rating
+		System.out.print("Enter the rating value(1-10): ");
+		int rate=obj.nextInt();
+		if(rate>=9) {
+			System.out.println("Excellent");
+		}
+		else if(rate<9 && rate>=7) {
+			System.out.println("Good");
+		}
+		else if(rate<7 && rate>=5) {
+			System.out.println("Average");
+		}
+		else {
+			System.out.println("Poor");
+		}
+		
+		
+		//largest of 4 no
+				System.out.print("Enter no1: ");
+				int no1=obj.nextInt();
+				System.out.print("Enter no2: ");
+				int no2=obj.nextInt();
+				System.out.print("Enter no3: ");
+				int no3=obj.nextInt();
+				System.out.print("Enter no4: ");
+				int no4=obj.nextInt();
+				if(no1>no2 && no1>no3 && no1>no4) {
+					System.out.println(no1+" is greatest");
+				}
+				else if(no2>no1 && no2>no3 && no2>no4) {
+					System.out.println(no2+" is greatest");
+				}
+				else if(no3>no1 && no3>no2 && no3>no4) {
+					System.out.println(no3+" is greatest");
+				}
+				else {
+					System.out.println(no4+" is greatest");
+				}
+		
+		
+		
+		
+		//Classify temperature
+		System.out.print("Enter the temperature(in celcius): ");
+		int temp=obj.nextInt();
+		if(temp<=5) {
+			System.out.println("Freezing");
+		}
+		else if(temp>5 && temp<=20) {
+			System.out.println("Cold");
+		}
+		else if(temp>20 && temp<=40) {
+			System.out.println("Warm");
+		}
+		else {
+			System.out.println("Hot");
+		}
+		
+		
+		
+		//ATM
+		System.out.print("Enter option(Check,withdraw,deposit): ");
+		String opt=obj.nextLine();
+		double amt=5000;
+		if(opt.equalsIgnoreCase("Check")) {
+			System.out.println("Your available balance is "+amt);
+		}
+		else if(opt.equalsIgnoreCase("withdraw")) {
+			System.out.println("Enter the amount to withdraw: ");
+			double withamt=obj.nextInt();
+			if(withamt>amt) 
+				{
+					System.out.println("insufficient balance!");
+					return;
+				}			
+			System.out.println("Amount withdrawn successfully");
+			amt-=withamt;
+			System.out.println("Your available balance is "+amt);	
+			}
+			else if(opt.equalsIgnoreCase("deposit")) {
+				System.out.println("Enter the amount to deposit: ");
+				double dpamt=obj.nextInt();
+				System.out.println("Amount deposited successfully");
+				amt+=dpamt;
+				System.out.println("Your available balance is "+amt);
+					
+			}
+			else {
+				System.out.println("Invalid option! Try again");
+			}
+		
+		
+		
+		//number range
+		System.out.print("Enter the number: ");
+		int n=obj.nextInt();
+		if(n>=0 && n<=10) {
+			System.out.println(n+" is within the range of 0-10");
+		}
+		else if(n>=11 && n<=50) {
+			System.out.println(n+" is within the range of 11-50");
+		}
+		else if(n>=51 && n<=100) {
+			System.out.println(n+" is within the range of 51-100");
+		}
+		else {
+			System.out.println(n+" is more than 100");
+		}
+		
+		
+		//+VE,-VE,0
+				System.out.print("Enter the number: ");
+				int n0=obj.nextInt();
+				if(n0>0) {
+					System.out.println("given number is positive");
+				}
+				else if(n0<0) {
+					System.out.println("given number is negative");
+				}
+				else {
+					System.out.println("given number is zero");
+				}
+		
+		
+		//eligibility of scholorship
+				System.out.print("Enter your mark: ");
+				int m=obj.nextInt();
+				System.out.print("Enter you annual income: ");
+				int sal=obj.nextInt();
+				if(m>=90 && sal<=75000) {
+					System.out.println("100% scholarship");
+				}
+				else if((m<90 && m>=80) && (sal>75000 && sal<=150000 )) {
+					System.out.println("75% scholarship");
+				}
+				else if((m<80 && m>=70)&& (sal>150000 && sal<=200000)) {
+					System.out.println("50% scholoarship");
+				}
+				else {
+					System.out.println("not eligible");
+				}
+
+   
+		
+		
+		//blood pressure level
+				System.out.print("Enter your bp: ");
+				float bp=obj.nextFloat();
+				if(bp<=90) {
+					System.out.println("Low blood pressure");
+				}
+				else if(bp>90 && bp<=120 ) {
+					System.out.println("Normal blood pressure");
+				}
+				else if(bp>120 && bp<=130) {
+					System.out.println("Slightly elevated bp level");
+				}
+				else {
+					System.out.println("High blood pressure ");
+				}
+		
+		
+		
+		//no of days in year
+				System.out.print("Enter the year: ");
+				int year=obj.nextInt();
+				if(year%4==0 && year%100!=0) {
+					System.out.println("It is leap year and it has 366 days");
+				}
+				else if(year%4==0 && year%100==0 && year%400==0) {
+					System.out.println("It is leap year and it has 366 days");
+				}
+				
+				else {
+					System.out.println("not a leap year and it has 365 days");
+				}
+		
+		
+		
+		//BMI
+		System.out.print("Enter the BMI: ");
+		int index=obj.nextInt();
+		if(index<18.5) {
+			System.out.println("You are under weight");
+		}
+		else if(index>=18.5 && index<=24.9) {
+			System.out.println("Healthy weight");
+		}
+		else if(index>=25.0 && index<=29.9) {
+			System.out.println("Over weight");
+		}
+		else if(index>=30.0 && index<=34.9) {
+			System.out.println("Obesity class I");
+		}
+		
+		else {
+			System.out.println("Obesity Class II");
+		}
+
+
+		
+		
+		
+		//cricket score
+		System.out.print("Enter the score: ");
+		int score=obj.nextInt();
+		if(score==0) {
+			System.out.println("duck out");
+		}
+		else if(score>=50 && score<=99) {
+			System.out.println("Half century");
+		}
+		else if(score>=100) {
+			System.out.println("Century");
+		}
+		else {
+			System.out.println("invalid score");
+		}
+		
+		
+		
+		//internet speed
+		System.out.print("Enter the Mbps: ");
+		int mbps=obj.nextInt();
+		if(mbps>=0.5 && mbps<=10) {
+			System.out.println("Slow speed");
+		}
+		else if(mbps>10 && mbps<=50) {
+			System.out.println("moderate speed");
+		}
+		else if(mbps>50 && mbps<=100) {
+			System.out.println("good speed");
+		}
+		else if(mbps>100 && mbps<=500) {
+			System.out.println("fast speed");
+		}
+		
+		else {
+			System.out.println("very fast speed");
+		}
+
+		
+		//transport types
+		System.out.print("Enter the  no of wheels: ");
+		int wheel=obj.nextInt();
+		if(wheel==2) {
+			System.out.println("bike");
+		}
+		else if(wheel==3){
+			System.out.println(" auto");
+		}
+		else if(wheel==4) {
+			System.out.println(" car");
+		}
+		else if(wheel==6) {
+			System.out.println("Large bus");
+		}
+		else if(wheel>=8 && wheel<=10) {
+			System.out.println("truck");
+		}
+		else {
+			System.out.println("Heavy vehicle");
+			
+		}
+		
+		
+		
+		
+		//bonus
+		System.out.print("Enter the year of experience: ");
+		int yr=obj.nextInt();
+		if(yr<=1) {
+			System.out.println("no bonus");
+		}
+		else if(yr>1 && yr<=5) {
+			System.out.println("25% bonus");
+		}
+		else if(yr>5 && yr<=10) {
+			System.out.println("50% bonus");
+		}
+		else {
+			System.out.println("75% bonus");
+		}
+
+
+		
+		
+		
+		//mark
+		System.out.print("Enter the mark: ");
+		int mark=obj.nextInt();
+		if(mark>=90) {
+			System.out.println("Topper");
+		}
+		else if(mark<90 && mark>=80) {
+			System.out.println("distinction");
+		}
+		else if(mark<80 && mark>=70) {
+			System.out.println("merit");
+		}
+		else if(mark<70 && mark>=50) {
+			System.out.println("pass");
+		}
+		else {
+			System.out.println("fail");
+		}
+		
+		
+		
+		
+		//triangle validity
+		System.out.print("Enter the sides: ");
+		int a1=obj.nextInt();
+		int a2=obj.nextInt();
+		int a3=obj.nextInt();
+		if((a1+a2)>a3 && (a2+a3)>a1 && (a1+a3)>a2){
+			System.out.println("triangle is valid");
+		}
+		
+		else {
+			System.out.println("not valid");
+		}
+		
+		
+		
+		
+		//uppercase,lowercase
+		System.out.print("Enter the character: ");
+		char ch=obj.next().charAt(0);
+		if(ch>='a' && ch<='z') {
+			System.out.println("lowercase");
+		}
+		else if(ch>='A' && ch<='Z') {
+			System.out.println("uppercase");
+		}
+		else if(ch>='0' && ch<='9') {
+			System.out.println("digit");
+		}
+		
+		else {
+			System.out.println("special character");
+		}
+
+
+
+	}
+
+}
+
