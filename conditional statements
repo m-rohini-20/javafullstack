@@ -849,3 +849,193 @@ public class elseif {
 
 }
 
+
+
+
+
+package javafullstack;
+
+import java.util.Scanner;
+
+public class nesteif {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		
+		
+//		+ve and even or odd
+		System.out.print("Enter the number:");
+		int n1=obj.nextInt();
+		if(n1>=0) {
+			if(n1%2==0) {
+				System.out.println("number is positive and even");
+			}
+			else {
+				System.out.println("number is positive and odd");
+			}
+		}
+		else {
+			System.out.println("number is negative");
+		}
+		
+		
+		
+		
+//		passed and distinction
+		System.out.print("Enter the marks of 3 sub:");
+		int m1=obj.nextInt();
+		int m2=obj.nextInt();
+		int m3=obj.nextInt();
+		
+		if(m1>=50 && m2>=50 && m3>=50) {
+			if(m1>=95 && m2>=95 && m3>=95) {
+				System.out.println("distinction");
+			}
+			else {
+				System.out.println("Passed");
+			}
+		}
+		else {
+			System.out.println("failed");
+		}
+		
+		
+		
+		
+		
+//		age>18 and license
+		System.out.print("Enter the age:");
+		int age=obj.nextInt();
+		obj.nextLine();
+		if(age>=18) {
+			System.out.print("Do you have license?(yes/no)");
+			String ch=obj.nextLine();
+			if(ch.equalsIgnoreCase("yes")) {
+				System.out.println("user is above 18 and license");
+			}
+			else {
+				System.out.println("user is above 18 and does not have license");
+			}
+		}
+		else {
+			System.out.println("below 18");
+		}
+		
+
+		
+		
+		
+//	login
+	System.out.print("Enter the email:");
+	String mail=obj.nextLine();
+	if(mail.equals("abc@gmail.com")) {
+		System.out.println("Enter the password: ");
+		String pass=obj.nextLine();
+		
+		if(pass.equals("abc123")) 
+		{
+			System.out.println("login successfully");
+		}
+		else {
+			System.out.println("incorrect password");
+		}
+	}
+	else {
+		System.out.println("invalid user");
+	}
+		
+		
+		
+		
+//	divisible by 5 & 10
+	System.out.print("Enter the number:");
+	int n2=obj.nextInt();
+	if(n2%5==0 ){
+		if(n2%10==0) {
+			System.out.println("number is divisible by 5 and 10");
+		}
+		else {
+			System.out.println("only divisible by 5");
+		}
+	}
+	else {
+		System.out.println("not divisible by 5");
+	}
+		
+		
+		
+		
+//		leap year
+		System.out.print("Enter the year:");
+		int year=obj.nextInt();
+		if(year%4==0) {
+			if(year%100!=0) {
+				System.out.println("leap year");
+			}
+			else if(year%100==0 && year%400==0){
+				System.out.println("leap year");
+			}
+			else {
+				System.out.println("not a leap year");
+			}
+		}
+		else {
+			System.out.println("not a leap year");
+		}
+		
+		
+		
+		
+//    salary and experience
+		System.out.print("Enter the salary:");
+		int sal=obj.nextInt();
+		if(sal>30000) {
+			System.out.println("Enter experience:");
+			int exp=obj.nextInt();
+			if(exp>5) {
+				System.out.println("bonus");
+			}
+			else {
+				System.out.println("not enough experience");
+			}
+		}
+		else {
+			System.out.println("insufficient salary");
+		}
+		
+		
+		
+		
+		
+		
+		
+//		3-digit and palindrome
+		System.out.print("Enter the number:");
+		int no=obj.nextInt();
+		int num=no;
+		if(no>=100 && no<=999) {
+			int sum=0;
+			while(no>0) {
+				sum=(sum*10)+(no%10);
+				no/=10;
+			}
+			if(sum==num) {
+				System.out.println("three digit palindrome number");
+			}
+			else {
+				System.out.println("not a  three digit palindrome");
+			}
+		}
+		else {
+			System.out.println("not a three digit");
+		}
+		
+		
+		
+		
+
+	}
+
+}
+
+
