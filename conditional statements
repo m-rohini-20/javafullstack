@@ -1029,6 +1029,262 @@ public class nesteif {
 		else {
 			System.out.println("not a three digit");
 		}
+
+
+
+
+
+//	alphabet-uppercase/lowercase
+	System.out.print("Enter the character: ");
+	int ch1=obj.next().charAt(0);
+	if((ch1>='a' && ch1<='z')||(ch1>='A' && ch1<='Z')) {
+		if(ch1>='A' && ch1<='Z') {
+			System.out.println("Uppercase alphabet");
+		}
+		else {
+			System.out.println("lowercase alphabet");
+		}
+	}
+	else {
+		System.out.println("not a alphabet");
+	}
+		
+		
+		
+		
+//		triangle validity
+		System.out.print("Enter length of three sides : ");
+		int a1=obj.nextInt();
+		int a2=obj.nextInt();
+		int a3=obj.nextInt();
+		if((a1+a2)>a3 && (a2+a3)>a1 && (a1+a3)>a2) {
+			if(a1==a2  && a2==a3 && a1==a3) {
+				System.out.println("triangle is valid and it is equilateral");
+			}
+			else if((a1==a2 && a1!=a3  && a2!=a3)|| (a3==a2 && a1!=a3  && a2!=a1)||(a1==a3 && a1!=a2  && a2!=a3)){
+				System.out.println(" triangle is valid and it is isosceles");
+			}
+			else {
+				System.out.println("Triangle is valid");
+			}
+		}
+		else {
+			System.out.println("not valid triangle");
+		}
+		
+		
+		
+		
+	//	balance
+		System.out.print("Enter the withdrawal amt:");
+		int amt=obj.nextInt();
+		int bal=5000;
+		if(bal>0) {
+			if(amt<=bal) {
+				System.out.println("amt withdrawn successfully");
+				System.out.println("available balance: "+(bal-amt));
+			}
+			else {
+				System.out.println("insufficient balance");
+			}
+		}
+		else {
+			System.out.println("no balance");
+		}
+		
+		
+		
+//		temperature
+			System.out.print("Enter the temperature:");
+			int temp=obj.nextInt();
+			if(temp>0) {
+				if(temp<20) {
+					System.out.println("cold temperature");
+					
+				}
+				else {
+					System.out.println("hot temperature");
+				}
+			}
+			else {
+				System.out.println("freezing");
+			}
+		
+		
+		
+//		mark topper
+			System.out.print("Enter the mark:");
+			int mk=obj.nextInt();
+			if(mk>=35) {
+				if(mk>=90) {
+					System.out.println("Topper");
+								}
+				else {
+					System.out.println("Passed");
+				}
+			}
+			else {
+				System.out.println("failed");
+			}
+		
+		
+		
+		
+//		prime
+			System.out.print("Enter the no:");
+			int pn=obj.nextInt();
+		
+			if(pn>1) {
+				 boolean flag=false;
+				 for(int i=2; i<pn;i++){
+					 
+					 if(pn%i==0) {
+						 flag=true;
+					 } 
+				 }
+				 if(flag==false) {
+					 System.out.println(pn+" is a prime number");
+				 }
+				 else{
+					 System.out.println(pn+" is not a prime number");
+				 }
+				
+			}
+			else {
+				System.out.println("negative number");
+			}
+		
+		
+		
+		
+//		password check
+			System.out.print("Enter the password:");
+			String p=obj.nextLine();
+		
+			if(p.length()>=8) {
+				  int c=0;
+				  char p1;
+				 for(int i=0;i<p.length();i++) {
+					 p1=p.charAt(i);
+					 if(p1>='0' && p1<='9') {
+						 c++;
+					 }
+					
+				 }
+				
+				 if(c>0) {
+					 System.out.println(">8 and contains digit");
+				 }
+				 else {
+					 System.out.println(">8 and does not contains digit");
+				 }
+				
+			}
+			else {
+				System.out.println("password is less than 8");
+			}
+		
+		
+		
+//	digit and even no
+	System.out.print("Enter single character:");
+	char num1=obj.next().charAt(0);
+	if(num1>='0' && num1<='9') {
+		if(num1%2==0) {
+			System.out.println("number is even");
+		}
+		else {
+			System.out.println("number is odd");
+		}
+	}
+	else {
+		System.out.println("not a number");
+	}
+		
+		
+		
+//	dept and rating
+	System.out.print("Enter the dept:");
+	String dt=obj.nextLine();
+	if(dt.equalsIgnoreCase("it")) {
+		System.out.println("Enter the rating: ");
+		float r=obj.nextFloat();
+		if(r>=4) {
+			System.out.println("IT dept and >4 rating");
+		}
+		else {
+			System.out.println("IT dept and <4 rating");
+		}
+	}
+	else {
+		System.out.println("not a IT dept");
+	}
+		
+		
+		
+		
+		
+//		purchase amt
+		System.out.print("Enter the amount:");
+		int a=obj.nextInt();
+		obj.nextLine();
+		if(a>1000) {
+			System.out.print("is customer premium member(yes/no): ");
+			String ans=obj.nextLine();
+			if(ans.equalsIgnoreCase("yes") ){
+				System.out.println("premium member and purchase amt>1000");
+			}
+			else {
+				System.out.println("not a premium member");
+			}
+		}
+		else {
+			System.out.println("purchase amount is less than 1000");
+		}
+		
+		
+		
+		
+		
+//		divisible by 2 and 4
+		System.out.print("Enter the number:");
+		int N=obj.nextInt();
+		if(N%2==0) {
+			if(N%4==0) {
+				System.out.println("number is divisible by 2 and 4");
+			}
+			else {
+				System.out.println("number is divisible by 2 but not by 4");
+			}
+		}
+		else {
+			System.out.println("not divisible by 2");
+		}
+		
+		
+		
+		
+		
+//		student eligibility
+		System.out.print("Enter the attendance percentage:");
+		int per=obj.nextInt();
+		if(per>=75) {
+			System.out.print("Enter mark:");
+			int mk1=obj.nextInt();
+		
+			if(mk1>=50) {
+				System.out.println("eligible");
+			}
+			else {
+				System.out.println("not enough mark");
+			}
+		}
+		else {
+			System.out.println("not eligible");
+		
+		}
+		
+		
 		
 		
 		
