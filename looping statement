@@ -1,0 +1,199 @@
+package javafullstack;
+
+import java.util.Scanner;
+
+public class Task1 {
+
+	public static void main(String[] args) {
+		
+		Scanner ob=new Scanner(System.in);
+		
+		
+//	print 1-N
+		System.out.println("Enter the number of values you want to print: ");
+		int n=ob.nextInt();
+		for(int i=1;i<=n;i++) {
+			System.out.print(i+"\t");
+		}
+		
+		
+		
+//		print N-1
+			System.out.println("Enter the number of values you want to print: ");
+			int n1=ob.nextInt();
+			for(int i=n1;i>=1;i--) {
+				System.out.print(i+"\t");
+			}
+		
+		
+		
+		
+//		print even no between 1-N
+			System.out.println("Enter the number of values you want to print: ");
+			int n2=ob.nextInt();
+			for(int i=1;i<=n2;i++) {
+				
+				if(i%2==0) {
+				System.out.print(i+"\t");
+				}
+		}
+		
+		
+		
+//	  sum of n natural number
+			System.out.println("Enter the number of values you want to add: ");
+			int n3=ob.nextInt();
+			int sum=0;
+			for(int i=1;i<=n3;i++) {
+				sum+=i;
+			}
+			System.out.println("Sum of first "+n3+" number: "+sum);
+		
+		
+		
+//		sum of digit
+			System.out.println("Enter a number: ");
+			int num=ob.nextInt();
+			int sum=0;
+			while(num>0) {
+				sum+=(num%10);
+				num/=10;
+			}
+			System.out.println("sum of the digit: "+sum);
+		
+		
+		
+//		reverse a given number
+			System.out.println("Enter a number : ");
+			int num1=ob.nextInt();
+			int rev=0;
+			while(num1>0) {
+				rev=(rev*10)+(num1%10);
+				num1/=10;
+			}
+			System.out.println("Reverse of the given digit is "+rev);
+		
+		
+		
+		
+//		palindrome
+		System.out.println("Enter a number : ");
+		int num2=ob.nextInt();
+		int no=num2;
+		int rev=0;
+		while(num2>0) {
+			rev=(rev*10)+(num2%10);
+			num2/=10;
+		}
+		if(no==rev) {
+			System.out.println("Palindrome");
+		}
+		else {
+			System.out.println("not a palindrome");
+		}
+		
+		
+		
+		
+		//factorial
+		System.out.print("Enter a number : ");
+		int n0=ob.nextInt();
+		int fact=1;
+		for(int i=1;i<=n0;i++) {
+			fact*=i;
+		}
+		System.out.println("Factorial of the given number is: "+fact);
+		
+		
+		
+		
+		//prime
+				System.out.print("Enter a number : ");
+				int n1=ob.nextInt();
+				int count=0;
+				for(int i=2;i<n1;i++) {
+					if(n1%i==0) {
+						count++;
+					}
+				}
+				if(count==0) {
+					System.out.println("Prime number");
+				}
+				else {
+					System.out.println("not a prime number");
+				}
+		
+		
+		
+		
+//		fibonacci series
+				System.out.print("Enter the number value you need: ");
+				int fn=ob.nextInt();
+				int x=-1,y=1,sum=0,i=1;
+				do {
+					sum=x+y;
+					x=y;
+					y=sum;
+					System.out.print(sum+"\t");
+					i++;
+				}while( i<=fn);
+		
+		
+		
+		//Armstrong
+				System.out.print("Enter a number : ");
+				int an=ob.nextInt();
+				int num0=an,c=0,sum=0;
+				while(an>0) {
+					c++;
+					an/=10;
+				}
+				an=num0;
+				while(an>0) {
+					sum+=Math.pow((an%10), c);
+					an/=10;
+				}
+				if(sum==num0) {
+					System.out.println("Armstrong number");
+				}
+				else {
+					System.out.println("Not a armstrong number");
+				}
+		
+		
+		
+		
+		//decimal to binary
+				System.out.print("Enter a number : ");
+				int bn=ob.nextInt();
+				String binary="";
+				int rem=0;
+				while(bn>0) {
+					rem=bn%2;
+					bn/=2;
+					binary=rem+binary;
+				}
+				
+				System.out.println("Binary equivalent of given deimal "+bn+" :"+binary);
+		
+		
+		
+		//perfect number
+		System.out.println("Enter a number: ");
+		int per=ob.nextInt();
+		int sum=0;
+		for(int i=1;i<per;i++) {
+			if(per%i==0) {
+				sum+=i;
+			}
+		}
+		if(sum==per) {
+			System.out.println("Perfect number");
+		}
+		else {
+			System.out.println("Not a perfect number");
+		}
+				
+	}
+
+}
