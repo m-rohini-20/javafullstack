@@ -1,0 +1,200 @@
+package javafullstack;
+
+import java.util.Scanner;
+
+public class forloop {
+
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		
+		
+		
+		
+		//print 1-50
+		for(int i=1;i<=50;i++) {
+			System.out.print(i+"\t");
+		}
+		
+		
+		
+		//square of no 1-20
+		for(int i=1;i<=20;i++) {
+			System.out.print((i*i)+"\t");
+		}
+		
+		
+		//multipication table 1-10
+		
+		System.out.print("Enter the table value you want to print: ");
+		int v=obj.nextInt();
+		for(int i=1;i<=10;i++) {
+			System.out.println(v+"x"+i+"="+(v*i));
+		}
+		
+		
+		
+		//sum of even no 1-100
+		int sum=0;
+		for(int i=1;i<=100;i++) {
+			if(i%2==0) {
+				sum+=i;
+			}
+		}
+		System.out.println("Sum of even no between 1-100 is "+sum);
+		
+		
+		
+		//count of no divisble by 3(1-100)
+		int c=0;
+		for(int i=1;i<=100;i++) {
+			if(i%3==0) {
+				c++;
+			}
+		}
+		System.out.println("total count of number divisible by 3 in range of 1-100 is "+c);
+
+		
+		
+		//ASCII  value of A-Z
+				
+		for(char i='A';i<='Z';i++) {
+			System.out.println("ASCII value of "+i+"="+((int)i));
+		}
+		
+		
+		//factorial of 1-10
+				for(int i=1;i<=10;i++) {
+					int fact=1;
+					for(int j=1;j<=i;j++) {
+						fact*=j;
+				}
+				System.out.println("factorial of "+i+":"+fact);
+			}
+		
+		
+		
+		
+		//reverse of string
+		System.out.print("Enter a word: ");
+		String w1=obj.nextLine();
+		String rev="";
+		char ch;;
+		int n=w1.length();
+		for(int i=n-1;i>=0;i--) {
+			
+			
+			ch=w1.charAt(i);
+			rev+=ch;
+		}
+		System.out.println("reverse of the given word: "+rev);
+		
+		
+		//element of an array
+		System.out.print("Enter the array size: ");
+		int n=obj.nextInt();
+		System.out.println("enter the array elements:: ");
+		int arr[]=new int[n];
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=obj.nextInt();
+		}
+		System.out.println("Array elements are: ");
+		for(int i=0;i<arr.length;i++) {
+			
+			System.out.print(arr[i]+"\t");
+		}
+		
+		
+		
+		
+//		index and value of array
+		System.out.print("Enter the array size: ");
+		int n=obj.nextInt();
+		System.out.println("enter the array elements:: ");
+		int arr[]=new int[n];
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=obj.nextInt();
+		}
+		System.out.println("Array elements are: ");
+		for(int i=0;i<arr.length;i++) {
+			
+			System.out.print("Index ("+i+") ="+arr[i]+"\t");
+		}
+	
+		
+		
+		
+//		pattern1
+		
+		for(int i=1;i<=4;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+//		pattern2
+		
+		for(int i=1;i<=4;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+		
+		
+		
+//		sum of digit
+		System.out.print("enter the number: ");
+		int num=obj.nextInt();
+		int sum=0;
+		while(num>0) {
+			sum+=(num%10);
+			num/=10;
+			
+		}
+		System.out.println("Sum of the digit: "+sum);
+		
+		
+		
+		//prime between 1-200
+		System.out.println("Prime number between 1-200: ");
+		for(int i=2;i<=200;i++) {
+			int c=0;
+			for(int j=2;j<i;j++) {
+				if(i%j==0) {
+					c++;
+				}
+			}
+			if(c==0) {
+				System.out.println(i);
+			}
+		}
+		
+		
+		
+//		vowels in a string
+		
+		
+		System.out.print("Enter a String: ");
+		String s=obj.nextLine();
+		char c;
+		int ct=0;
+		for(int i=0;i<s.length();i++) {
+			c=s.charAt(i);
+			if(c=='a' || c=='e' || c=='i'|| c=='o'||c=='u'|| c=='A' || c=='E' || c=='O' || c=='I' || c=='U') {
+				ct++;
+			}
+		}
+		System.out.println("The total number of vowels in the given word is "+ct);
+		
+		
+		
+		
+
+	}
+		
+}
+
+
