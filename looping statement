@@ -193,6 +193,24 @@ public class Task1 {
 		else {
 			System.out.println("Not a perfect number");
 		}
+
+
+
+//decimal to binary and no of 1
+		System.out.print("Enter a number : ");
+		int bn=ob.nextInt();
+		String binary="";
+		int rem=0,c=0;
+		while(bn>0) {
+			rem=bn%2;
+			bn/=2;
+			binary=rem+binary;
+			if(rem==1) {
+				c++;
+			}
+		}
+		System.out.println("Binary equivalent of given deimal "+bn+" :"+binary);
+		System.out.println("The total number of 1 in binary number is "+c);
 				
 	}
 
