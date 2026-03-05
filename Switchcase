@@ -1,0 +1,370 @@
+package javafullstack;
+
+import java.util.Scanner;
+
+public class SwitchCase {
+
+	public static void main(String[] args) {
+		
+		Scanner ob=new Scanner(System.in);
+		
+		
+		
+//		bank services
+		System.out.print("Enter option(1-Balance, 2-Deposit, 3-Withdraw): ");
+		int op=ob.nextInt();
+		int bal=5000;
+		switch(op) {
+		case 1:
+			System.out.println("Your current balance is "+bal);
+			break;
+		case 2:
+			System.out.print("Enter deposit number: ");
+			int dpamt=ob.nextInt();
+			System.out.println("Amount deposited successfully"+"\n Your current balance is"+(bal+dpamt));
+			break;
+		case 3:
+			System.out.print("Enter the withdraw amount: ");
+			int withamt=ob.nextInt();
+			if(withamt<=bal)
+			System.out.println("Amount withdrawn"+"\n Available balance: "+(bal-withamt));
+			else
+				System.out.println("Insufficient balance");
+			break;
+			
+		default:
+			System.out.println("Invalid choice");
+			}
+		
+		
+		
+		
+		
+		// select a programming language
+		System.out.print("Enter option(1-Java, 2-python, 3-C++): ");
+		int ch=ob.nextInt();
+		switch(ch) {
+		case 1:
+			System.out.println("Java language selected ");
+			break;
+		case 2:
+			System.out.println("Python language selected");
+			break;
+		case 3:
+			System.out.print("C++ language selected");
+			break;
+			
+		default:
+			System.out.println("Invalid choice");
+			}
+		
+		
+		
+		
+		// movie ticket booking
+				System.out.print("Enter option(1-Gold, 2-Silver, 3-Platinum): ");
+				int tic=ob.nextInt();
+				switch(tic) {
+				case 1:
+					System.out.println("Gold category");
+					break;
+				case 2:
+					System.out.println("Silver category");
+					break;
+				case 3:
+					System.out.println("Platinum category");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		
+		
+		// mobile brand details
+				System.out.print("Enter option(1-oppo, 2-vivo, 3-samsung): ");
+				int m=ob.nextInt();
+				switch(m) {
+				case 1:
+					System.out.println("Oppo mobile RAM=128GB amt=20000");
+					break;
+				case 2:
+					System.out.println("Vivo mobile RAM=128GB amt=22000");
+					break;
+				case 3:
+					System.out.println("Samsung mobile RAM=128GB amt=25000");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		
+		
+		// Restaurant order
+				System.out.print("Enter option(1-Briyani, 2-Naan, 3-Fried Rice): ");
+				int order=ob.nextInt();
+				switch(order) {
+				case 1:
+					System.out.println("Briyani served");
+					break;
+				case 2:
+					System.out.println("Naan served");
+					break;
+				case 3:
+					System.out.println("Fried Rice served");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		
+		// subject and staff
+				System.out.print("Enter option(LIC, SS , EDC ): ");
+				String ot=ob.nextLine();
+				switch(ot) {
+				case "LIC":
+					System.out.println("Ramya");
+					break;
+				case "SS":
+					System.out.println("Krishnaveni");
+					break;
+				case "EDC":
+					System.out.println("Vasanthakumar");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		
+		
+		// city and state
+				System.out.print("Enter option(1-chennai, 2-cochin, 3-jaipur): ");
+				int st=ob.nextInt();
+				switch(st) {
+				case 1:
+					System.out.println("TamilNadu");
+					break;
+				case 2:
+					System.out.println("Kerala");
+					break;
+				case 3:
+					System.out.println("Rajastan");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		// days
+				System.out.print("Enter option(1-sunday, 2-monday, 3-Tuesday, 4-wednesday, 5-thursday, 6-Friday, 7-saturday): ");
+				int day=ob.nextInt();
+				switch(day) {
+				case 2:	
+				case 3:
+				case 4:
+				case 5:
+				case 6:
+					System.out.println("Weekday");
+					break;
+				case 1:
+				case 7:
+					System.out.println("Weekend");
+					break;
+				default:
+					System.out.println("Invalid choice");
+					}
+				
+				
+				// full form
+				System.out.print("Enter option(SSC,HSC,UPSC): ");
+				String ff=ob.nextLine();
+				switch(ff) {
+				case "SSC":
+					System.out.println("Secondary school  certificate");
+					break;
+				case "HSC":
+					System.out.println("Higher secondary certificate");
+					break;
+				case "UPSC":
+					System.out.println("Union public service commission");
+					break;
+					
+				default:
+					System.out.println("Invalid choice");
+					}
+		
+		
+		
+		
+		// currency symbol
+		System.out.print("Enter option(INR,USD,EUR): ");
+		String cr=ob.nextLine();
+		switch(cr) {
+		case "INR":
+			System.out.println("₹");
+			break;
+		case "USD":
+			System.out.println("$");
+			break;
+		case "EUR":
+			System.out.println("€");
+			break;
+			
+		default:
+			System.out.println("Invalid choice");
+			}
+		
+		
+		
+		// Math operation
+		System.out.print("Enter the value: ");
+		int no=ob.nextInt();
+		System.out.print("Enter option(1-square,2-squareroot, 3-cube): ");
+		int M=ob.nextInt();
+		
+		switch(M) {
+		case 1:
+			System.out.println("The square of the given no: "+(no*no));
+			break;
+		case 2:
+			System.out.println("The square root of the given no: "+(Math.sqrt(no)));
+			break;
+		case 3:
+			System.out.println("The cube of the given no: "+(no*no*no));
+			break;
+			
+		default:
+			System.out.println("Invalid choice");
+			}
+	
+	
+			
+		
+		
+		// vehicle service
+		System.out.print("Enter option(1-full service,2-water wash,3-oil change,4-engine check): ");
+		int vs=ob.nextInt();
+		switch(vs) {
+		case 1:
+			System.out.println("Full service selected");
+			break;
+		case 2:
+			System.out.println("Water wash");
+			break;
+		case 3:
+			System.out.println("Oil change");
+			break;
+		case 4:
+			System.out.println("Engine check");
+			break;
+		default:
+			System.out.println("Invalid choice");
+			}
+	
+		
+		
+		
+		// package plan
+		System.out.print("Enter option(1-basic,2-Standard,3-premium): ");
+		int pp=ob.nextInt();
+		switch(pp) {
+		case 1:
+			System.out.println("Basic plan selected ");
+			break;
+		case 2:
+			System.out.println("Standard plan");
+			break;
+		case 3:
+			System.out.println("Premium plan");
+			break;		
+		default:
+			System.out.println("Invalid choice");
+			}
+		
+		
+		
+		// game level
+		System.out.print("Enter option(1-easy,2-medium,3-hard): ");
+		int game=ob.nextInt();
+		switch(game) {
+		case 1:
+			System.out.println("Easy");
+			break;
+		case 2:
+			System.out.println("Medium");
+			break;
+		case 3:
+			System.out.println("Hard");
+			break;		
+		default:
+			System.out.println("Invalid choice");
+			}
+		
+		
+		
+		
+		// festival
+		System.out.print("Enter option(1-12): ");
+		int f=ob.nextInt();
+		switch(f) {
+		case 1:
+			System.out.println("Pongal");
+			break;
+		case 2:
+			System.out.println("Maha shivaratri");
+			break;
+		case 3:
+			System.out.println("Holi");
+			break;
+		case 4:
+			System.out.println("Tamil new year");
+			break;
+		case 5:
+			System.out.println("Buddha Purnima");
+			break;
+		case 6:
+			System.out.println("Eid-ul-Adha");
+			break;
+		case 7:
+			System.out.println("guru purnima");
+			break;
+		case 8:
+			System.out.println("Onam");
+			break;
+		case 9:
+			System.out.println("Ganesh Chaturthi");
+			break;
+		case 10:
+			System.out.println("Durga puja");
+			break;
+		case 11:
+			System.out.println("Diwali");
+			break;
+		case 12:
+			System.out.println("Chritmas");
+			break;
+		default:
+			System.out.println("Invalid choice");
+			}
+	
+				
+				
+				
+				
+				
+				
+			
+		}
+		
+
+	}
+
+
