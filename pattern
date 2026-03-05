@@ -1,0 +1,150 @@
+package javafullstack;
+
+
+
+public class pattern {
+	
+	public static void main(String[] args) {
+		
+		
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=5;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		for(int i=1;i<=5;i++) {
+			for(int j=5;j>=i;j--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		int i2=1;
+		while(i2<=5) {
+			int j=1;
+			while(j<=5) {
+				System.out.print("*");
+				j++;
+			}
+			System.out.println();
+			i2++;
+		}
+		
+		
+		
+		int k=1;
+		while(k<=5) {
+			int l=1;
+			while(l<=k) {
+				System.out.print("*");
+				l++;
+			}
+			k++;
+			System.out.println();
+		}
+		
+		
+		
+		int i1=1;
+		while(i1<=5) {
+			int j1=5;
+			while(j1>=i1) {
+				System.out.print("*");
+				j1--;
+			}
+			System.out.println();
+			i1++;
+		}
+		
+		
+		
+		
+		int s=4;
+		for(int ii=1;ii<=5;ii++) {
+			
+			for(int k1=1;k1<=s;k1++) {
+				System.out.print(" ");
+			}
+			s--;
+			for(int jj=1;jj<=ii;jj++) {
+				System.out.print("*");
+			}
+			for(int l1=1;l1<ii;l1++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+		for(int i0=1;i0<=5;i0++) {
+			
+			for(int j=1;j<=5;j++) {
+				
+				if(i0==1 || i0==5) {
+					System.out.print("* ");
+				}
+				else{
+					if(j==1 || j==5) {
+						System.out.print("* ");
+					}
+					else {
+						System.out.print("  ");
+					}
+				}
+			}
+			System.out.println();
+			
+		}
+		
+		
+		
+		
+		
+		
+		for(int i=1;i<=5;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(j);
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+		int l=1;
+		for(int i=1;i<=4;i++) {
+			for(int j=1;j<=i;j++) {
+				System.out.print(l+" ");
+				l++;
+			}
+		System.out.println();
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}
