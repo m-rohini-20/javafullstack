@@ -1,0 +1,521 @@
+package javafullstack;
+import java.util.*;
+public class Array {
+
+	public static void main(String[] args) {
+		Scanner obj= new Scanner(System.in);
+		
+		//print all elements of an array
+		System.out.print("Enter array size: ");
+		int n=obj.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n; i++) {
+			
+			arr[i]=obj.nextInt();
+			
+		}
+		
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<n; i++) {
+			System.out.print(arr[i]+" ");
+		}
+		System.out.println();
+		
+		
+		
+		
+		//print all sum of elements in an array
+		System.out.print("Enter array size: ");
+		int n1=obj.nextInt();
+		int arr1[]=new int[n1];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n1; i++) {
+			
+			arr1[i]=obj.nextInt();
+			
+		}
+		int sum=0;
+		for(int i=0; i<n1; i++) {
+			sum+=arr1[i];
+		}
+		System.out.println("Sum of the elements in the array are: "+sum);
+		
+		
+		
+		
+		//average of elements in an array
+				System.out.print("Enter array size: ");
+				int n2=obj.nextInt();
+				int arr2[]=new int[n2];
+				System.out.println("Enter elements: ");
+				for(int i=0; i<n2; i++) {
+					
+					arr2[i]=obj.nextInt();
+					
+				}
+				float average=0;
+				for(int i=0; i<n2; i++) {
+					average+=arr2[i];
+				}
+				System.out.println("Average of the elements in the array are: "+(average/n2));
+		
+		
+		
+		
+		//maximum element
+				System.out.print("Enter array size: ");
+				int n3=obj.nextInt();
+				int arr3[]=new int[n3];
+				System.out.println("Enter elements: ");
+				for(int i=0; i<n3; i++) {
+					
+					arr3[i]=obj.nextInt();
+					
+				}
+				int max=0;
+				for(int i=0; i<n3; i++) {
+					if(max<arr3[i]) {
+						max=arr3[i];
+					}
+				}
+				System.out.println("Maximum elements in the array are: "+max);
+		
+		
+		
+		
+		
+		//minimum element
+		System.out.print("Enter array size: ");
+		int n4=obj.nextInt();
+		int arr4[]=new int[n4];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n4; i++) {
+			
+			arr4[i]=obj.nextInt();
+			
+		}
+		int min=arr4[0];
+		for(int i=0; i<n4; i++) {
+			if(min>arr4[i]) {
+				min=arr4[i];
+			}
+		}
+		System.out.println("Maximum elements in the array are: "+min);
+		
+		
+		
+		
+		//odd even
+				System.out.print("Enter array size: ");
+				int n5=obj.nextInt();
+				int arr5[]=new int[n5];
+				System.out.println("Enter elements: ");
+				for(int i=0; i<n5; i++) {
+					
+					arr5[i]=obj.nextInt();
+					
+				}
+				int odd=0,even=0;
+				for(int i=0; i<n5; i++) {
+					if(arr5[i]%2==0) {
+						even++;
+					}
+					else {
+						odd++;
+					}
+				}
+				System.out.println("Odd numbers in an array: "+odd);
+				System.out.println("Even numbers in an array: "+even);
+		
+		
+		
+		
+		//search 
+		System.out.print("Enter array size: ");
+		int n6=obj.nextInt();
+		int arr6[]=new int[n6];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n6; i++) {
+			
+			arr6[i]=obj.nextInt();
+			
+		}
+		System.out.println("Enter the element you want to search: ");
+		int s=obj.nextInt();
+		int c=0;
+		for(int i=0; i<n6; i++) {
+			if(s==arr6[i]) {
+				c++;
+				break;
+			}
+			
+		}
+		if(c==1) {
+			System.out.println("Element present");
+		}
+		else {
+			System.out.println("No match found");
+		}
+		
+		
+		
+		
+		//Reverse an array
+				System.out.print("Enter array size: ");
+				int n7=obj.nextInt();
+				int arr7[]=new int[n7];
+				System.out.println("Enter elements: ");
+				for(int i=0; i<n7; i++) {
+					
+					arr7[i]=obj.nextInt();
+					
+				}
+				System.out.println("Reverse of the array: ");
+				for(int i=(n7-1); i>=0; i--) {
+					System.out.print(arr7[i]+" ");
+					
+				}
+				System.out.println();
+				
+				
+				
+				
+		
+		
+		//copy one array to another
+		System.out.print("Enter array size: ");
+		int n8=obj.nextInt();
+		int arr8[]=new int[n8];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n8; i++) {
+			
+			arr8[i]=obj.nextInt();
+			
+		}
+		System.out.println("Elements of array");
+		for(int i=0;i<n8;i++) {
+			System.out.print(arr8[i]+" ");
+			
+		}
+		System.out.println();
+		int a[]=new int[n8];
+		System.out.println("Copy of array: ");
+		for(int i=0;i<n8;i++) {
+			a[i]=arr8[i];
+			System.out.print(a[i]+" ");
+		}
+		
+		System.out.println();
+		
+		
+		
+		
+		//ascending order
+		System.out.print("Enter array size: ");
+		int n9=obj.nextInt();
+		int arr9[]=new int[n9];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<n9; i++)
+		{
+			
+			arr9[i]=obj.nextInt();
+			
+		}
+		System.out.println("Elements of array");
+		for(int i=0;i<n9;i++) 
+		{
+			System.out.print(arr9[i]+" ");
+			
+		}
+		System.out.println();
+		
+		System.out.println("Ascending order of array: ");
+		for(int i=0;i<n9;i++) 
+		{
+			for(int j=i+1;j<n9;j++) 
+			{
+				if(arr9[i]>arr9[j]) 
+				{
+					int temp=arr9[i];
+					arr9[i]=arr9[j];
+					arr9[j]=temp;
+				}
+			}
+		}
+			
+			
+			for(int i=0;i<n9;i++) {
+				System.out.print(arr9[i]+" ");
+				
+			}
+		System.out.println();
+		
+		
+		
+		//second largest and second smallest
+				System.out.print("Enter array size: ");
+				int n10=obj.nextInt();
+				int arr10[]=new int[n10];
+				System.out.println("Enter elements: ");
+				for(int i=0; i<n10; i++)
+				{
+					
+					arr10[i]=obj.nextInt();
+					
+				}
+				System.out.println("Elements of array");
+				for(int i=0;i<n10;i++) 
+				{
+					System.out.print(arr10[i]+" ");
+					
+				}
+				System.out.println();
+				
+				System.out.println("Ascending order of array: ");
+				for(int i=0;i<n10;i++) 
+				{
+					for(int j=i+1;j<n10;j++) 
+					{
+						if(arr10[i]>arr10[j]) 
+						{
+							int temp=arr10[i];
+							arr10[i]=arr10[j];
+							arr10[j]=temp;
+						}
+					}
+				}
+					
+					
+					for(int i=0;i<n10;i++) {
+						System.out.print(arr10[i]+" ");
+						
+					}System.out.println();
+					System.out.println("The second largest element of array: "+(arr10[n10-2]));
+					System.out.println("The second smallest element of array: "+(arr10[0+1]));
+		
+		
+		
+		
+		
+		//remove duplicate
+		System.out.print("Enter array size: ");
+		int N=obj.nextInt();
+		int Arr[]=new int[N];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<N; i++) {
+			
+			Arr[i]=obj.nextInt();
+			
+		}
+		
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<N; i++) {
+			System.out.print(Arr[i]+" ");
+		}
+		
+		for(int i=0;i<N;i++) {
+			for (int j=i+1;j<N;j++) {
+				if(Arr[i]==Arr[j]) {
+					Arr[j]=-1;
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<N; i++) {
+			if(Arr[i]!=-1)
+			{
+			System.out.print(Arr[i]+" ");
+		}
+		}
+		System.out.println();
+		
+		
+		
+		
+		
+		//frequency of the element
+		System.out.print("Enter array size: ");
+		int N1=obj.nextInt();
+		int Arr1[]=new int[N1];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<N1; i++) {
+			
+			Arr1[i]=obj.nextInt();
+			
+		}
+		
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<N1; i++) {
+			System.out.print(Arr1[i]+" ");
+		}
+		System.out.println();
+		System.out.println("Enter the element you want to check: ");
+		int elm=obj.nextInt();
+		int count=0;
+		for(int i=0;i<N1;i++) {
+
+				if(Arr1[i]==elm) {
+					
+					count++;
+				}
+			}
+			System.out.println("count of "+elm+"="+count);
+			
+		
+		
+		
+	//palindrome	
+		System.out.print("Enter array size: ");
+		int ss=obj.nextInt();
+		int a1[]=new int[ss];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<ss; i++) {
+			
+			a1[i]=obj.nextInt();
+			
+		}
+		
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<ss; i++) {
+			System.out.print(a1[i]+" ");
+		}
+		System.out.println();	
+		int ctt=0;
+		int sz=ss;
+		for(int i=0;i<a1.length;i++) {
+			
+			if(a1[i]!=a1[sz-1]) {
+				ctt++;
+			}
+			sz--;
+
+		}
+		if(ctt==0) {
+			System.out.println("Array is palindrome");
+		}
+		else {
+			System.out.println("Not a palindrome");
+		}
+		
+		
+		
+		
+		
+		
+		//frequency of the element
+		System.out.print("Enter array size: ");
+		int nn=obj.nextInt();
+		int arr_1[]=new int[nn];
+		System.out.println("Enter elements: ");
+		for(int i=0; i<nn; i++) {
+			
+			arr_1[i]=obj.nextInt();
+			
+		}
+		
+		System.out.println("The elements of the array are: ");
+		for(int i=0; i<nn; i++) {
+			System.out.print(arr_1[i]+" ");
+		}
+		System.out.println();
+		//new array
+		int ar_1[]=new int[nn];
+		
+		for(int i=0;i<nn;i++) {
+			ar_1[i]=arr_1[i];
+		}
+		//remove duplicate
+		for(int k=0;k<nn;k++) {
+			for(int l=k+1;l<nn;l++) {
+				
+				if(arr_1[k]==arr_1[l]) {
+					arr_1[l]=-1;
+				}
+			}
+		}
+		//count
+		for(int i=0;i<nn;i++) {
+			int count1=0;
+			for(int j=0;j<nn;j++)
+			{
+					if(arr_1[i]==ar_1[j]) {
+						count1++;
+					}
+						
+			}
+		    if(arr_1[i]!=-1)
+				System.out.println("The count of "+arr_1[i]+"="+count1);
+				
+			}
+			
+		
+		
+		
+		//common element
+		System.out.print("Enter   array size: ");
+		int s1=obj.nextInt();
+		int a11[]=new int[s1];
+		System.out.println("Enter 1st array elements: ");
+		for(int i=0; i<s1; i++) {
+			
+			a11[i]=obj.nextInt();
+			
+		}
+		
+		int a12[]=new int[s1];
+		System.out.println("Enter 2nd array elements: ");
+		for(int i=0; i<s1; i++) {
+			
+			a12[i]=obj.nextInt();
+			
+		}
+		System.out.println("The elements of the  1st array are: ");
+		for(int i=0; i<s1; i++) {
+			System.out.print(a11[i]+" ");
+		}
+		System.out.println();
+		
+		System.out.println("The elements of the  2nd array are: ");
+		for(int i=0; i<s1; i++) {
+			System.out.print(a12[i]+" ");
+		}
+		System.out.println();
+		//remove dupicate from array
+		for(int k=0;k<s1;k++) {
+			for(int l=k+1;l<s1;l++) {
+				
+				if(a11[k]==a11[l]) {
+					a11[l]=-1;
+				}
+			}
+		}
+		for(int k=0;k<s1;k++) {
+			for(int l=k+1;l<s1;l++) {
+				
+				if(a12[k]==a12[l]) {
+					a12[l]=-1;
+				}
+			}
+		}
+		//common
+		System.out.println("The common element between the two array are: ");
+		 for(int i=0;i<s1;i++) {
+			 
+			for(int j=0;j<s1;j++) {
+				
+				if(a11[i]==a12[j])
+				{
+					if(a12[j]!=-1)
+					System.out.print(a11[i]+" ");
+				}
+			}
+		 }
+		
+		
+	}
+		
+	}
+
+
