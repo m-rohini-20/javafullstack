@@ -1,0 +1,91 @@
+package javafullstack;
+import java.util.*;
+public class Functions {
+	
+	//without argument and without return type
+	public void example1(){
+		int a=10,b=20;
+		System.out.println("Sum : "+(a+b));
+		
+	}
+	
+	//with argument and with return type
+	public int example2(int a) {
+		int sum=0;
+		for(int i=1;i<=a;i++) {
+			sum+=i;
+		}
+		return sum;
+	}
+	
+	
+	//without argument and with return type
+	public String prime() {
+		int num=37;
+		int c=0,i=2;
+		while(i<num) {
+			if(num%i==0) {
+				c++;
+			}
+			i++;
+		}
+		if(c==0) {
+			return "Prime";
+		}
+		else {
+			return "Not a Prime";
+		}
+	}
+		
+		//with argument and without return type
+		public void array(int arr[]) {
+			int c=0,s=arr.length-1;
+			for(int i=0;i<arr.length;i++) {
+				if(arr[i]!=arr[s]) {
+					c++;
+				}
+				s--;
+			}
+			if(c==0) {
+				System.out.println("Palindrome array");
+			}
+			else {
+				System.out.println("Not a palindrome array");
+			}
+			
+			
+		}
+			
+		
+	
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		
+		Functions obj=new Functions();
+		
+		System.out.println("Without argument and without return type");
+		obj.example1();
+		
+		System.out.println("\nWith argument and with return type");
+		System.out.print("Enter the number of natural number: ");
+		int n=x.nextInt();
+		System.out.println("Sum of "+n+" natural  number is: "+(obj.example2(n)));
+		
+		
+		System.out.println("\nWithout argument and with return type");
+		System.out.println("The given number is "+obj.prime());
+		
+		
+		System.out.println("\nwith argument and without return type");
+		System.out.print("Enter the array size: ");
+		int s=x.nextInt();
+		int arr[]=new int[s];
+		System.out.println("Enter array elements: ");
+		for(int i=0;i<arr.length;i++) {
+			arr[i]=x.nextInt();
+		}
+		obj.array(arr);
+	}
+
+}
