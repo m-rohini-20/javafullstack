@@ -1,0 +1,459 @@
+package javafullstack;
+
+import java.util.Scanner;
+
+public class StringTask {
+
+	 public boolean check(String P){
+		 int uc=0,lc=0,dt=0,sp=0;
+		 boolean flag=true;
+		 if(P.length()==8) {
+			 
+			 for(int i=0;i<P.length();i++) {
+				 char C=P.charAt(i);
+				 if(C>='A' && C<='Z') {
+					 uc++;
+				 }
+				 else if(C>='a' && C<='z') {
+					 lc++;
+				 }
+				 else if(C>='0' && C<='9') {
+					 dt++;
+				 }
+				 else {
+					 sp++;
+				 }
+			 }
+			
+			  if(uc>=1 && lc>=1 && dt>=1 && sp>=1) {
+				  System.out.println("Valid Password");
+				  flag=false;
+				  
+			  }
+			  else {
+				  System.out.println("Invalid Password(must contains atleast one uppercase,one lowercase,one digit and a special character");
+			  }
+		 }
+		 else {
+			 System.out.println("Password length must be 8 characters");
+			 
+		 }
+	    return flag;
+			
+		}
+	
+
+	public static void main(String[] args) {
+	 Scanner obj=new Scanner(System.in);
+	 
+	 
+	//password in function
+		 boolean F=true;
+		 while(F==true) {
+			 System.out.println("Enter Password: ");
+			 String P=obj.nextLine();
+			 StringTask ob=new StringTask();
+			 F= ob.check(P);
+		 }
+	 
+	 //1.Reverse a String
+	 System.out.print("Enter a string:");
+	 String a=obj.nextLine();
+	 String b="";
+	 for(int i=0;i<a.length();i++) {
+		 char ch=a.charAt(i);
+		 b=ch+b;
+	 }
+	 System.out.println("The Reverse of the given word: "+b);
+	 
+	 
+	 
+	 //2.Palindrome
+	 System.out.print("Enter a string:");
+	 String A=obj.nextLine();
+	 String B="";
+	 for(int i=0;i<A.length();i++) {
+		 char ch=A.charAt(i);
+		 B=ch+B;
+	 }
+	 if(A.equalsIgnoreCase(B)) {
+		 System.out.println("Palindrome");
+	}
+	 else
+	 {
+		 System.out.println("Not a Palindrome");
+	 }
+	
+
+	 
+	 
+	 //3.Vowels
+	 System.out.print("Enter a string:");
+	 String a1=obj.nextLine();
+	int count=0,con=0,character=0;
+	 for(int i=0;i<a1.length();i++) {
+		 char ch=a1.charAt(i);
+		 character++;
+		 if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'|| ch=='A'|| ch=='E'|| ch=='I'|| ch=='O'||ch=='U')
+		 {
+			 count++;
+		
+	 }
+		 else {
+			 con++;
+		 }
+	 
+}
+	 System.out.println("Vowels count: "+count);
+	System.out.println("Consonants count: "+con);
+    System.out.println("Total character: "+character);
+	 
+	 
+	 
+	 
+	 // uppercase
+	 System.out.print("Enter a string:");
+	 String aa=obj.nextLine();
+	 String bb="";
+	 for(int i=0;i<aa.length();i++) {
+		 char ch=aa.charAt(i);
+		 if(ch>='a' && ch<='z') {
+			 int a=(int)(ch-32);
+			 bb=bb+(char)a;
+		 }
+		
+	 }
+	 System.out.println("UpperCase: "+bb);
+	 
+	 
+	 
+	 // lower
+	 System.out.print("Enter a string:");
+	 String aa1=obj.nextLine();
+	 String bb1="";
+	 for(int i=0;i<aa1.length();i++) {
+		 char ch=aa1.charAt(i);
+		 if(ch>='A' && ch<='Z') {
+			 int a=(int)(ch+32);
+			 bb1=bb1+(char)a;
+		 }
+		
+	 }
+	 System.out.println("LowerCase: "+bb1);
+	 
+	 
+	 
+	
+
+	 
+	// REMOVE SPACE
+		 System.out.print("Enter a string:");
+		 String A1=obj.nextLine();
+		 String B1="";
+		 for(int i=0;i<A1.length();i++) {
+			 char ch=A1.charAt(i);
+			 if(ch!=' ') {
+				B1=B1+ch;
+			 }
+			
+			
+		 }
+		 System.out.println("String: "+B1);
+	 
+	 
+	 
+	 // N0 OF WORDS
+	 System.out.print("Enter a string:");
+	 String Aa=obj.nextLine();
+	 String arr[]=Aa.split(" ");
+	 System.out.println("Number of words: "+arr.length);
+
+	 
+	 
+	 //find first ocuurence
+	 System.out.print("enter a string");
+	 String v=obj.nextLine();
+	 System.out.print("Enter a character to find: ");
+	 char ch=obj.next().charAt(0);
+	 for(int i=0;i<v.length();i++) {
+		 if(ch==v.charAt(i)) {
+				 System.out.println("The index of the character: "+i);
+				 break;
+			 }
+		 }
+	 }
+	 
+	 //find last occurence
+	 System.out.print("enter a string");
+	 String v1=obj.nextLine();
+	 System.out.print("Enter a character to find: ");
+	 char ch1=obj.next().charAt(0);
+	 for(int i=v1.length()-1;i>=0;i--) {
+		 if(ch1==v1.charAt(i)) {
+				 System.out.println("The index of the charcter: "+i);
+				 break;
+			 
+		 }
+
+	 
+//	
+
+	 //check string only contains digit
+	 System.out.print("Enter a string:");
+	 String a=obj.nextLine();
+	 int C=0;
+	 for(int i=0;i<a.length();i++) {
+		 char ch=a.charAt(i);
+	
+		 
+		 if(ch>='0' && ch<='9')
+			 C++;
+	 }
+
+	 if(C==a.length()) {
+		 System.out.println("Contains only digit");
+	 }
+	 else {
+		 System.out.println("Have other character");
+	 }
+	 
+//	
+
+	 
+	 // concats tow string
+	 System.out.print("Enter the 1st String: ");
+	 String s1=obj.nextLine();
+	 System.out.print("Enter the 2nd String: ");
+	 String s2=obj.nextLine();
+	 System.out.println(s1.concat(" "+s2));
+	 
+	 
+	 
+	 //Remove duplicate  characters from string
+	 
+	 System.out.print("Enter the first string: ");
+	 String st=obj.nextLine();
+	 StringBuilder ST1=new StringBuilder(st);
+	 for(int i=0;i<ST1.length();i++) {
+		 for(int j=i+1;j<ST1.length();j++) {
+			 if(ST1.charAt(i)==ST1.charAt(j)) {
+				
+				 ST1.deleteCharAt(j);
+			     j--;
+			 }
+		 }
+	 }
+	 
+	 System.out.println(ST1);
+	 
+	 
+	 
+	 //Frequency of each character
+	 System.out.print("Enter the String: ");
+	 String sb=obj.nextLine();
+	 StringBuilder sr=new StringBuilder(sb);
+	 for(int i=0;i<sr.length();i++) {
+		 int count1=1;
+		 for(int j=i+1;j<sr.length();j++) {
+			  if(sr.charAt(i)==sr.charAt(j)) {
+				  count1++;
+				  sr.deleteCharAt(j);
+				  j--;
+			  }
+		 }
+		 if(sr.charAt(i)!=' ')
+		 System.out.println("The count of occurance of letter "+sr.charAt(i)+" is: "+count1);
+	 }
+	 
+	 
+	 //largest word in a sentence
+	 System.out.print("Enter the Sentence: ");
+	 String sen=obj.nextLine();
+	 String ar[]=sen.split(" ");
+	 String max="";
+	 int len=0;
+	 for(int i=0;i<ar.length;i++) {
+		 if(len<=ar[i].length()) {
+			 
+				  len=ar[i].length();
+				  max=ar[i];
+		 }
+	 }
+	 System.out.println("Longest word in the sentence: ");
+	 for(int i=0;i<ar.length;i++)
+	 {
+		 if(max.length()==ar[i].length()) {
+			 System.out.println(ar[i]);
+		 }
+	 }
+	 
+	 
+	 
+	 
+	 //print each word on new line
+	 System.out.println("Enter the sentence: ");
+	 String SEN=obj.nextLine();
+	 String AR[]=SEN.split(" ");
+	 for(int i=0;i<AR.length;i++) {
+		 System.out.println(AR[i]);
+		 
+	 }
+	 
+		 
+//reverse each word in a sentence
+		 System.out.print("Enter the sentence: ");
+		 String Sen1=obj.nextLine();
+		 String A[]=Sen1.split(" ");
+		 System.out.println("Reverse each word in a sentence: ");
+		 for(int i=0;i<A.length;i++) {
+			 String word=A[i];
+			 String Rev="";
+			 for(int j=0;j<word.length();j++) {
+				 char cc=word.charAt(j);
+				 Rev=cc+Rev;
+			 }
+			System.out.print(Rev+" ");
+			
+		 }
+		 System.out.println();
+		 System.out.println("Reverse a sentence");
+		 for(int i=A.length-1;i>=0;i--) {
+			 System.out.print(A[i]+" ");
+		 }
+	 
+	 
+	 //anagram
+	 System.out.print("Enter the 1st word: ");
+	 String A=obj.nextLine();
+	 System.out.print("Enter the 2nd word: ");
+	 String B=obj.nextLine();
+	 int CON=0;
+	 if(A.length()==B.length()) {
+		 for(int i=0;i<A.length();i++) {
+			 for(int j=0;j<B.length();j++) {
+				 if(A.charAt(i)==B.charAt(j)) {
+					 CON++;
+				 }
+			 }
+		 }
+		 if(CON==A.length()) {
+			 System.out.println("Anagram");
+		 }
+		 else
+		 {
+			 System.out.println("Not a Anagram");
+		 }
+	 }
+	 else {
+		 System.out.println("Not a Anagram,Different length");
+	 }
+	 
+	 
+	 
+	 //remove specific character from a string
+	 System.out.print("Enter a String:");
+	 String WD=obj.nextLine();
+	 StringBuilder wd=new StringBuilder(WD);
+	 System.out.print("Enter the character to want to remove: ");
+	 char CT=obj.next().charAt(0);
+	 for(int i=0;i<wd.length();i++) {
+		 if(CT==wd.charAt(i)) {
+			 wd.deleteCharAt(i);
+			 i--;
+		 }
+	 } 
+	 System.out.println("The modified string: "+wd);
+	 
+	 
+	 
+	 
+	 
+//	// password
+//	 boolean fl=true;
+//	 while(fl==true) {
+//	 System.out.print("Enter the Password: ");
+//	 String pass=obj.nextLine();
+//	 int uc=0,lc=0,dt=0,sp=0;
+//	 if(pass.length()==8) {
+//		 
+//		 for(int i=0;i<pass.length();i++) {
+//			 char C=pass.charAt(i);
+//			 if(C>='A' && C<='Z') {
+//				 uc++;
+//			 }
+//			 else if(C>='a' && C<='z') {
+//				 lc++;
+//			 }
+//			 else if(C>='0' && C<='9') {
+//				 dt++;
+//			 }
+//			 else {
+//				 sp++;
+//			 }
+//		 }
+//		
+//		  if(uc>=1 && lc>=1 && dt>=1 && sp>=1) {
+//			  System.out.println("Valid Password");
+//			  fl=false;
+//		  }
+//		  else {
+//			  System.out.println("Invalid Password(must contains atleast one uppercase,one lowercase,one digit and a special character");
+//		  }
+//	 }
+//	 else {
+//		 System.out.println("Password length must be 8 characters");
+//		 
+//	 }
+//	 }	
+	}
+
+	
+}
+
+
+
+package javafullstack;
+
+import java.util.Scanner;
+
+public class Toggle {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int n=scan.nextInt();
+		String a="";
+		while(n>0) {
+			int r=n%2;
+			a=r+a;
+			n/=2;
+		}
+		System.out.println("Binary equivalent: "+a);
+		StringBuilder b=new StringBuilder(a);
+		StringBuilder s=new StringBuilder("");
+		for(int i=0;i<b.length();i++) {
+			char ch=b.charAt(i);
+			if(ch=='1') {
+				ch='0';		
+			}
+			else {
+				ch='1';
+			}
+			s=s.append(ch);
+		}
+		System.out.println("Toggle binary value: "+s);
+		int sum=0,pow=s.length()-1;
+		for(int i=0;i<s.length();i++) {
+			if(s.charAt(i)=='0') {
+				sum+=((0)*(int)(Math.pow(2, pow)));
+			}
+			else {
+				sum+=((1)*(Math.pow(2, pow)));
+			}
+			pow--;
+		}
+		System.out.println(sum);
+	}
+
+}
+
