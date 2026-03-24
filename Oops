@@ -1,0 +1,94 @@
+package javafullstack;
+import java.util.*;
+
+
+//1.Student Mark
+ class Marks{
+	 int id,mark;
+	 String name;
+	 public void store(int id,String name,int mark) {
+		 this.id=id;
+		 this.name=name;
+		 this.mark=mark;
+		 
+	 }
+	 void display() {
+		 System.out.println("Student ID: "+id+"\nStudent name: "+name+"\nStudent mark: "+mark);
+		 
+	 }
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Student id,name,mark: ");
+		int id=sc.nextInt();
+		sc.nextLine();
+		String name=sc.nextLine();
+		int mark=sc.nextInt();
+		Marks m=new Marks();
+		m.store(id, name, mark);
+		m.display();
+		
+
+	}
+
+}
+
+
+
+
+//2.Area of the rectangle
+class Rectangle{
+	
+	int length,breadth;
+	void area(int length,int breadth) {
+		this.length=length;
+		this.breadth=breadth;
+		System.out.println("Area of the rectangle: "+(length*breadth));
+	}
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the length: ");
+		int l=sc.nextInt();
+		System.out.println("Enter the breadth: ");
+		int b=sc.nextInt();
+		Rectangle r= new Rectangle();
+		r.area(l, b);
+		
+		
+
+	}
+
+}
+
+
+//3.area and circumference of circle
+ class Circle{
+	float radius;
+	void display(float radius) {
+		this.radius=radius;
+		System.out.println("Area of the circle: "+(Math.PI*Math.pow(radius, 2)));
+		System.out.println("Circumference of the circle: "+(2*radius*Math.PI));
+		
+	}
+	
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter radius: ");
+		float r=sc.nextFloat();
+		Circle c=new Circle();
+		c.display(r);
+
+	}
+
+}
