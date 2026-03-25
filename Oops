@@ -92,3 +92,286 @@ public class Demo {
 	}
 
 }
+
+
+
+
+
+
+//4.employee details
+class Employee{
+	 int id;
+	 String name;
+	 double salary;
+	 void display(int id,String name,double salary) {
+		 this.id=id;
+		 this.name=name;
+		 this.salary=salary;
+		 System.out.println("Employee id: "+id);
+		 System.out.println("Employee name: "+name);
+		 System.out.println("Employee salary: "+salary);
+		 
+	 }
+	
+	
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.print("Enter the number of employee: ");
+		int n=x.nextInt();
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter the employee id,name,salary: ");
+			int id=x.nextInt();
+			x.nextLine();
+			String name=x.nextLine();
+			double salary=x.nextDouble();
+			Employee e_i=new Employee();
+			e_i.display(id, name, salary);
+		}
+		
+		
+		
+	}
+
+}
+
+
+//5.car details 
+class Car{
+
+	public void show(String brand, String model, double price) {
+		System.out.println("Car brand: "+brand+"\nCar model: "+model+"\nPrice: "+price);
+		
+	}
+	
+	
+	
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the car brand,model,price: ");
+		String brand=x.nextLine();
+		String model=x.nextLine();
+		double price=x.nextDouble();
+		Car obj=new Car();
+		obj.show(brand,model,price);
+	}
+}
+
+
+
+//6.Mobile details
+ class Mobile{
+
+	public void show(String brand,  double price, int storage) {
+		System.out.println("Mobile brand: "+brand+"\nMobile price: "+price+"\nStorage: "+storage);
+		
+	}
+	
+	
+	
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the mobile brand,price,storage: ");
+		String b=x.nextLine();
+		double p=x.nextDouble();
+		int s=x.nextInt();
+		Mobile m= new Mobile();
+		m.show(b, p, s);
+		
+		
+	}
+}
+
+
+
+//7.bank application
+class Bank{
+
+	 int bal=5000;
+	 void show(long no,String name) {
+		 System.out.println("Account  number: "+no+"\nName: "+name+"\nBalance: "+bal);
+		 
+	 }
+	 void deposit(double amt) {
+		 System.out.println("Your current balance: "+(bal+amt));
+	 }
+	 void withdraw(double amt) {
+		 if(amt<bal)
+		 System.out.println("Available balance: "+(bal-amt));
+		 else
+			 System.out.println("Insufficient balance");
+	 }
+	
+	
+	
+ }
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("enter account number, name: ");
+		long an=x.nextLong();
+		x.nextLine();
+		String name=x.nextLine();
+		Bank b=new Bank();
+		b.show(an, name);
+		System.out.println("enter choice(1-deposit ,2-withdraw):");
+		int ch=x.nextInt();
+		if(ch==1) {
+			System.out.print("Enter deposit amt: ");
+			double amt=x.nextDouble();
+			b.deposit(amt);
+			
+		}
+		else if(ch==2) {
+			System.out.println("Enter withdraw amt: ");
+			double amt=x.nextDouble();
+			b.withdraw(amt);
+		}
+		else {
+			System.out.println("invalid choice ");
+		}
+		
+	}
+}
+
+//8.library
+class Library{
+
+	public void show(int id, String name, String author) {
+		System.out.println("Book id: "+id+"\nBook name: "+name+"\nAuthor "+author);
+		
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the bookid,name,author: ");
+		int id=x.nextInt();
+		x.nextLine();
+		String name=x.nextLine();
+		String author=x.nextLine();
+		Library l=new Library();
+		l.show(id, name, author);
+		
+		
+	}
+}
+
+
+//9.laptop
+class Laptop{
+
+	public void show(String brand,  double price, int storage) {
+		System.out.println("Laptop brand: "+brand+"\nlaptop price: "+price+"\nStorage: "+storage);
+		
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the laptop brand,price,storage: ");
+		String b=x.nextLine();
+		double p=x.nextDouble();
+		int s=x.nextInt();
+		Laptop m= new Laptop();
+		m.show(b, p, s);
+		
+		
+	}
+}
+
+
+
+
+//10.movie
+class Movie{
+
+	public void show(String T,  String n, float r) {
+		System.out.println("Movie name: "+T+"\ndirector name: "+n+"\nrating: "+r);
+		
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the movie title, director name, rating: ");
+		String T=x.nextLine();
+		String n=x.nextLine();
+		float r=x.nextFloat();
+		Movie m=new Movie();
+		m.show(T,n,r);
+		
+		
+	}
+}
+
+
+
+//11.product details
+class Product{
+
+	public void show(int id, String name, double price) {
+		System.out.println("Product id: "+id+"\nProduct name: "+name+"\nProduct price "+price);
+		
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the product id,name,price: ");
+		int id=x.nextInt();
+		x.nextLine();
+		String name=x.nextLine();
+		double p=x.nextDouble();
+		Product pp=new Product();
+		pp.show(id, name, p);
+		
+		
+	}
+}
+
+//12.hotel booking
+class Hotel{
+
+	public void show(int id, String name, double price) {
+		System.out.println("Room no: "+id+"\ntype: "+name+"\nrent price "+price);
+		
+	}
+}
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Scanner x=new Scanner(System.in);
+		System.out.println("Enter the room no,type,price: ");
+		int id=x.nextInt();
+		x.nextLine();
+		String name=x.nextLine();
+		double p=x.nextDouble();
+        Hotel h=new Hotel();
+		h.show(id, name, p);
+		
+		
+	}
+}
