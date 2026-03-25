@@ -1,0 +1,73 @@
+//1.zoo management
+class Animal{
+	void eat() {
+		System.out.println("it eats");
+	}
+}
+class Dog extends Animal{
+     
+	void sound() {
+		System.out.println("it barks");
+	}
+}
+public class Demo {
+	public static void main(String[] args) {
+		
+		Dog d=new Dog();
+		d.eat();
+		d.sound();
+		
+	}
+}
+
+
+//2.Vehicle
+class Vehicle{
+	void features() {
+		System.out.println("has engine and brake");
+	}
+}
+class Car extends Vehicle{
+     
+	void behaviour() {
+		System.out.println("it drives");
+	}
+}
+public class Demo {
+	public static void main(String[] args) {
+		
+		Car c=new Car();
+		c.features();
+		c.behaviour();
+		
+	}
+}
+
+
+
+//3.College database
+class College{
+	void details() {
+		String name="anu";
+		int age=20;
+		System.out.println("Student name: "+name+"\nStudent age: "+age);
+	}
+
+}
+class Students extends College{
+	
+	void infor() {
+		int rollno=9875766;
+		int mark=90;
+		System.out.println("Student roll no: "+rollno+"\nStudent mark: "+mark);
+	}
+	
+}
+public class Demo {
+	public static void main(String[] args) {
+		
+		Students s=new Students();
+		s.details();
+		s.infor();
+	}
+}
