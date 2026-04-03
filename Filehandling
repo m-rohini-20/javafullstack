@@ -1,0 +1,96 @@
+package javafullstack;
+import java.io.*;
+import java.util.Scanner;
+
+public class FileHandlingTask {
+
+	public static void main(String[] args) throws IOException {
+		
+		Scanner obj=new Scanner(System.in);
+		System.out.print("Enter the total number of students: ");
+		int n=obj.nextInt();
+		
+		for(int i=0;i<n;i++) {
+		System.out.println("Student "+(i+1));
+		System.out.println("Enter id, name, marks: ");
+		int id=obj.nextInt();
+		obj.nextLine();
+		String name=obj.nextLine();
+		int marks=obj.nextInt();
+		File f=new File("C:\\Users\\My Self\\Desktop\\java task\\Student.txt");
+		f.createNewFile();
+		FileWriter fw =new FileWriter(f,true);
+		BufferedWriter b=new BufferedWriter(fw);
+		b.write("Student "+(i+1));
+		b.newLine();
+		b.write("id: "+id);
+		b.newLine();
+		b.write("name: "+name);
+		b.newLine();
+		b.write("Marks: "+marks);
+		b.newLine();
+		b.flush();
+		b.close();		
+		}
+
+		FileReader r=new FileReader("C:\\Users\\My Self\\Desktop\\java task\\Student.txt");
+		BufferedReader br=new BufferedReader(r);
+		String s=br.readLine();
+		while(s!=null) {
+			System.out.println(s);
+			s=br.readLine();
+		}
+
+
+
+//		task-2
+		
+		System.out.print("Enter username: ");
+		String name=obj.nextLine();
+		System.out.print("Enter Password: ");
+		String pass=obj.nextLine();
+		String Folder="C:\\Users\\My Self\\Desktop\\java task\\";
+		String fullpath=Folder+name+"_"+pass+".txt";
+		System.out.println("login/register:");		
+		String choice=obj.nextLine();
+		
+		if(choice.equalsIgnoreCase("register" )) 
+		{
+			
+			File ff =new File(fullpath);
+			ff.createNewFile();
+			FileWriter fw1 =new FileWriter(ff);
+			BufferedWriter bw1=new BufferedWriter(fw1);
+			bw1.write(name);
+			bw1.newLine();
+			bw1.write(pass);
+			bw1.newLine();
+			bw1.flush();
+			bw1.close();
+			System.out.println("Register successfully");
+			
+		}
+		else if(choice.equalsIgnoreCase("Login")) {
+			
+			FileReader fr1=new FileReader(fullpath);
+			BufferedReader br1=new BufferedReader(fr1);
+			String s=br1.readLine();
+			boolean fg=false;
+			while(s!=null) {
+				if(s.equals(name) || s.equals(pass)) {
+					System.out.println("Login successfully");
+					 fg=true;
+					break;
+				}
+				s=br1.readLine();
+			}
+			if(fg==false) {
+				System.out.println("Invalid user");
+			}
+		}
+		else {
+			System.out.println("invalid choice");
+		
+	}
+
+}
