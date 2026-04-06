@@ -1,0 +1,66 @@
+package oops;
+import java.util.*;
+public class Collections {
+
+	public static void main(String[] args) {
+	
+		Scanner sc=new Scanner(System.in);
+		ArrayList<Object> ar=new ArrayList<>();
+		while(true) {
+			
+			System.out.println("add item/remove item/view cart/exit");
+			String choice=sc.nextLine();
+			
+			if(choice.equalsIgnoreCase("add item")) {
+				System.out.println("enter item");
+				while(true) {
+					String item=sc.nextLine();
+					if(item.equalsIgnoreCase("exit")) {
+						break;
+					}
+					else {
+						ar.add(item);
+					}
+					
+				}
+				
+			}
+			
+			else if(choice.equalsIgnoreCase("remove item")) {
+				System.out.println("Enter item");
+				while(true) {
+					String item=sc.nextLine();
+					if(item.equalsIgnoreCase("exit")) {
+						break;
+					}
+					else {
+						if(ar.contains(item)) {
+							int index=ar.indexOf(item);
+							ar.remove(index);
+							System.out.println("item removed");
+						}
+						else {
+							System.out.println("item not found");
+						}
+					}
+				}
+				
+			}
+			
+			else if(choice.equalsIgnoreCase("view cart")) {
+				System.out.println(ar);
+			}
+			
+			else if(choice.equalsIgnoreCase("exit")) {
+				
+				System.out.println("cart exit");
+				break;
+			}
+			
+			else {
+				System.out.println("Invalid option! try again");
+			}
+		}
+	}
+
+}
